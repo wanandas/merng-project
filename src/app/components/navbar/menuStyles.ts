@@ -4,7 +4,7 @@ export default {
     width: "20px",
     height: "20px",
     right: "20px",
-    top: "20px",
+    top: "24px",
   },
   bmBurgerBars: {
     background: "#373a47",
@@ -15,6 +15,8 @@ export default {
   bmCrossButton: {
     height: "24px",
     width: "24px",
+    top: "21px",
+    right: "10px",
   },
   bmCross: {
     background: "#bdc3c7",

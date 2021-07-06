@@ -8,6 +8,8 @@ const LogoContainer = styled.div`
   ${tw`
     flex
     items-center
+    pl-2
+    lg:pl-0
   `}
 `;
 
@@ -39,7 +41,7 @@ export function Logo() {
       <Image>
         <img src={CarImageLogo} alt="car-logo" />
       </Image>
-      <LogoText>Your Car.</LogoText>
+      <LogoText>Yourcar.</LogoText>
     </LogoContainer>
   );
 }
