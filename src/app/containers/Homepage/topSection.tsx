@@ -4,6 +4,7 @@ import tw from "twin.macro";
 
 import Blob from "../../../assets/images/blob.svg";
 import StanAloneCar from "../../../assets/images/mclaren-orange-big.png";
+import { Button } from "../../components/button";
 import { SCREEN } from "../../components/responsive";
 
 const TopSectionContainer = styled.div`
@@ -91,7 +92,7 @@ const BlobContainer = styled.div`
     transform: rotate(-25deg);
   }
 
-  @media (min-width: ${SCREEN.sm}) {
+  @media (min-width: ${SCREEN.lg}) {
     width: 50em;
     max-height: 30em;
     right: -7em;
@@ -99,7 +100,7 @@ const BlobContainer = styled.div`
     transform: rotate(-30deg);
   }
 
-  @media (min-width: ${SCREEN.sm}) {
+  @media (min-width: ${SCREEN.xl}) {
     width: 70em;
     max-height: 30em;
     right: -15em;
@@ -126,16 +127,24 @@ const StandaloneCar = styled.div`
     right: -6em;
   }
 
-  @media (min-width: ${SCREEN.sm}) {
+  @media (min-width: ${SCREEN.lg}) {
     height: 21em;
     top: -8em;
     right: -5em;
   }
-  @media (min-width: ${SCREEN.sm}) {
+  @media (min-width: ${SCREEN.xl}) {
     height: 30em;
     top: -13em;
     right: -9em;
   }
+`;
+
+const ButtonsContainer = styled.div`
+  ${tw` 
+    flex
+    flex-wrap 
+    mt-2
+    `}
 `;
 
 export function TopSection() {
@@ -148,10 +157,14 @@ export function TopSection() {
           at the best price for you and get the best qulity cars for as long as
           you like
         </Description>
+        <ButtonsContainer>
+          <Button text="Book Your Ride" />
+          <Button text="Sell Your Car" theme="filled" />
+        </ButtonsContainer>
       </LefContainer>
       <RightContainer>
         <BlobContainer>
-          <img src={Blob} alt="car" />{" "}
+          <img src={Blob} alt="car" />
         </BlobContainer>
         <StandaloneCar>
           <img src={StanAloneCar} alt="car" />
